@@ -3,7 +3,8 @@ import expressGraphQL from "express-graphql";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { buildSchema } from 'graphql';
+
+import schema from "./graphql/";
 
 const app = express();
 const PORT = process.env.PORT || "4000";
@@ -21,22 +22,11 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
-// GraphQL schema
-const schema = buildSchema(`
-    type Query {
-        message: String
-    }
-`);
-// Root resolver
-const root = {
-    message: () => 'Hello World!'
-};
 // Create an express server and a GraphQL endpoint
-const app = express();
-app.use('/graphql', 
+app.use('/talkpretty', 
     cors(),
     bodyParser.json(),
-    express_graphql({
+    expressGraphQL({
         schema: schema,
         rootValue: root,
         graphiql: true
