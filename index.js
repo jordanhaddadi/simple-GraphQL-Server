@@ -32,4 +32,4 @@ app.use('/talkpretty',
         graphiql: true
     })
 );
-app.listen(PORT, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));
+app.listen(PORT, () => console.log('Express GraphQL Server Now Running On localhost:4000/talkpretty'));
