@@ -20,7 +20,7 @@
     "graphql": "^14.3.0",
     "graphql-tools": "^4.0.4",
     "graphql-yoga": "^1.17.4",
-    "merge-graphql-schemas": "^1.5.8", 
+    "merge-graphql-schemas": "^1.5.8",
     "mongoose": "^5.5.8",
     "nodemon": "^1.19.0"
   },
